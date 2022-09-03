@@ -6,36 +6,22 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 body {
-    background-color: #111111;
+background-color: #111111;
 font-family:'Montserrat',Arial, Helvetica, sans-serif;
 
 }
+/* .............nav bar......................... */
 
 nav {
     display: flex;
+    max-width: 1280px;
     justify-content:space-around;
     flex-direction:flex;
-    padding: 1.5rem 1rem 0rem 1rem;  
+    margin: 0 auto;
+    align-items:center;
 }
+
 .drop-icon {
     margin-left:5px;
     margin-top: 2px;
@@ -55,16 +41,54 @@ nav {
     width: 111px;
 }
 
-/* hero section */
-.left-side img {
-    
-    width:640px;
-    /* padding-bottom:50rem; */
+.mybar {
+    display: none;
 }
+
+
+@media only screen and (max-width: 830px) {
+.nav-items {
+display:none;
+}
+.mybar {
+display:block;
+}
+nav{
+    display: flex;
+    max-width:600px;
+    justify-content:space-between;
+    flex-direction:flex;
+    margin: 0 auto;
+    align-items:center;
+    padding: .5rem 1rem 0 1rem;   
+}
+.logo {
+    width: 70px;
+}
+
+}
+
+/* ....................................... */
+
+/* ..............hero section..................... */
+
+.mycontainer { 
+max-width:1280px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.left-side img {
+ width:640px;  
+}
+
 .hero-container {
     display:flex;
-    justify-content:center;
-    padding: 0rem 17rem 0rem 20rem;
+    justify-content:space-between;
+    align-items:center;
+    
 }
 .nav-button {
     width: 170px;
@@ -80,37 +104,99 @@ color:#fff;
 display: flex;
 gap:.3rem;
 flex-direction:column;
-justify-content:flex-start;
-padding-top:13rem;
+
 }
 .right-side h2 {
   color: #f83241;
   font-size:22px;
 }
-
 .right-side h1 {
     font-size: 64px;
   }
   .right-side p {
-    padding-right: 8rem;
     font-size: 20px;
   }
-/* ......................................................... */
+@media only screen and (min-width:831px) and (max-width:1230px) {
+    .right-side p {
+        font-size: 20px;
+        padding-right:4rem ;
+      }
+    .left-side img {
+        width:500px;  
+       }
+
+       .right-side {
+        color:#fff;
+        display: flex;
+        gap:.3rem;
+        flex-direction:column;
+        
+        }
+        .right-side h2 {
+          color: #f83241;
+          font-size:18px;
+        }
+        .right-side h1 {
+            font-size: 40px;
+          }
+          .right-side p {
+            font-size: 15px;
+          }
+
+}
+
+@media only screen and (max-width:831px) {
+
+    .hero-container {
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-direction:column;
+        
+    }
+
+    .left-side img {
+        width:350px;  
+       }
+
+       .right-side {
+        color:#fff;
+        display: flex;
+        gap:.3rem;
+        flex-direction:column;
+        padding:.9rem;
+        }
+        .right-side h2 {
+          color: #f83241;
+          font-size:15px;
+        }
+        .right-side h1 {
+            font-size: 25px;
+          }
+          .right-side p {
+            font-size: 13px;
+       }
+
+
+}
+/* .................................................. */
+
+
+/* .....................middele container.................................... */
+
+
 .middle {
     height:100vh;
+    margin:0 auto;
+    max-width: 1280px;
 }
  .middle-container {
     height:900px;
     width: 850px;
-    padding: 0rem 10rem 2rem 0rem;
     background-color: #181818;
-    /* margin-left: 5rem; */
 position: relative;
 padding-top: 5rem;
-/* display:flex; */
-/* flex-direction: column; */
-/* justify-content:flex-end; */
-/* justify-content:space-between; */
+
  }
 
 .three-box {
@@ -119,8 +205,10 @@ padding-top: 5rem;
     flex-direction:row;
     position: absolute;
     z-index: 10;
-    gap: 1.6rem;
-    left:27rem;  
+    gap: 1rem;
+    left:7.5rem;  
+    
+
 }
 .box {
     height: 350px;
@@ -129,7 +217,6 @@ padding-top: 5rem;
     display: flex;
     justify-content:center;
     flex-direction:column;
-    /* padding-left:1rem; */
     padding: 1rem 0 3rem 3rem;
     gap: 1.9rem;
     text-align:start;
@@ -144,30 +231,28 @@ padding-top: 5rem;
     color:white;
 }
 
-
-
 .box img { 
- 
-    width: 70px;
-
-
-
+  width: 70px;
 }
+
+
 .box h3 {
     font-size:30px;
     color: #fff;
 }
+
+
 .box p {
     font-size:20px;
     color: #fff;
-    
-
 }
+
+
+
 .box a {
     text-decoration:none;
     color: #f83241;
 }
-
 
 
 /* grid part */
@@ -179,12 +264,12 @@ padding-top: 5rem;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: 200px 200px;
     grid-template-areas: 
-        "y y y y y y y e e e p p p p p"
-        "y y y y y y y a a a c c c c c";
-        color: #fff;
-        position:absolute;
-        top: 35rem;
-        left:26.9rem;
+   "y y y y y y y e e e p p p p p"
+   "y y y y y y y a a a c c c c c";
+   color: #fff;
+   position:absolute;
+   top: 35rem;
+   left:7.5rem;
 }
 
 .y {
@@ -246,11 +331,6 @@ padding-top: 5rem;
 }
 
 
-/* .c, .ye, .p, .a  h1{
-    display: block;
-} */
-
-
 .grid-container span  {
     font-size:50px;
     color:#f83241;
@@ -264,15 +344,149 @@ padding-top: 5rem;
 }
 
 
+@media only screen and (max-width:1170px) {
+
+    .grid-container {
+        height: 100%;
+        display: grid;
+        grid-gap: 1.4rem;
+        margin-top:3rem;
+        grid-template-columns: repeat(16, 1fr);
+        grid-template-rows: 200px 200px 200px 200px 200px;
+        grid-template-areas: 
+       "y y y y y y y y y y y y y y y"
+       "e e e e e e e e e e e e e e e"
+       "a a a a a a a a a a a a a a a"
+       "c c c c c c c c c c c c c c c"
+       "p p p p p p p p p p p p p p p"
+       
+       
+       ;
+
+       color: #fff;
+       position:static;
+       top:0rem;
+       left:0rem;
+    }
+
+    .middle {
+        height:100%;
+        margin:0 auto;
+        max-width: 1280px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .three-box {
+        display: flex;
+        justify-content:center;
+        flex-direction:column;
+        position: static;
+        z-index: 10;
+        align-items: center;
+        gap: 1rem;
+        left:0rem;  
+        
+    
+    }
+
+    .y {
+        grid-area:y;
+        height: 200px;
+        width: 300px;
+        background-color: #181818;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        
+        
+    }
+    
+    .ye {
+        grid-area: e;
+        height: 200px;
+        width: 300px;
+        background-color: #1e1e1e;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    
+    }
+    
+    .c{
+        grid-area: c;
+        height: 200px;
+        width: 300px;
+        background-color: #1e1e1e;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    
+    }
+    
+    .p {
+        grid-area: p;
+        height: 200px;
+        width: 300px;
+        background-color: #1e1e1e;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .a {
+        grid-area: a;
+        height: 200px;
+        width: 300px;
+        background-color: #1e1e1e;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .middle-container {
+    height:auto;
+    width: 300px;
+    background-color:#111111;
+    position:static; ;
+    padding-top: 3rem;
+    
+     }
+
+     .box {
+        height: 350px;
+        width: 300px;
+        background-color: #1e1e1e;
+        display: flex;
+        justify-content:center;
+        flex-direction:column;
+        padding: 1rem;
+        gap: 1.9rem;
+        text-align:start;
+        align-items:start;
+    }
+
+
+
+}
+
+/* ............................... */
+
 /*  */
 
 .project-container {
     display:grid;
     grid-template-columns:600px 600px;
     grid-template-rows:450px 450px;
-    /* justify-items:space-around; */
     gap:1rem;
-    padding:6rem 0rem  2rem 21rem;
+    /* padding:6rem 0rem  2rem 21rem; */
+    margin-top:10rem;
+
 
 }
 .project-box {
@@ -280,7 +494,6 @@ padding-top: 5rem;
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    /* padding:1rem 0; */
     
 }
 
@@ -319,21 +532,94 @@ align-items:center;
     align-items: center;
 
 }
+.projcontainer {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+  
+}
 
+
+@media only screen and (max-width:1280px){
+
+    .project-container {
+        display:grid;
+        grid-template-columns:340px;
+        grid-template-rows:450px 450px 450px 450px;
+        gap:4rem;
+        /* padding:6rem 0rem  2rem 21rem; */
+        margin-top:10rem;
+    align-items:center;
+    }
+    .project-box-inner img {
+    width:310px;
+    height: 300px;
+
+align-items:center;
+
+}
+.project-box-inner {
+    
+    background-color:#1e1e1e;
+    padding: 3rem 1rem;
+    width:320px;
+    height: 310px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.text-box {
+    display:flex;
+    text-align:left;
+    flex-direction:column;
+    padding-right:2rem;
+    margin-top: 2rem;
+}
+.text-box p{
+color: #f83241;
+padding: 4px 0;
+
+
+}
+
+.text-box h3 {
+    color:#fff;
+    padding: 4px 0;
+}
+
+
+}
+
+
+
+/* ................................................... */
 
 /* contact box */
+.conbox {
+    max-width: 1280px;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+
+}
 
 .contact-box {
     display: flex;
     justify-content: space-between;
     flex-direction:row;
-    width: 52vw;
-    height: 25vh;
+    width: 100%;
+    height: 200px;
     background-color: #1e1e1e;
     align-items: center;
     text-align: center;
-    padding: 1rem 6rem 1rem 4rem;
+    padding: 1rem 10rem 1rem 7rem;
     margin-bottom:1rem;
+    gap: 2rem;
+    margin-top: 4rem;
 }
 
 .contact-box h1 {
@@ -343,17 +629,13 @@ align-items:center;
     color: #f0f0f0;
 }
 .contact-btn button {
-    width: 170px;
+    width: 140px;
     height: 60px;
     background: #c91b28;
     color: #fff;
     margin-top:1.4rem;
     border: none;
 }
-
-
-
-
 
 .contact {
     display: flex;
@@ -362,13 +644,51 @@ align-items:center;
     
 }
 
+@media only screen and (max-width: 768px) {
+
+
+    .contact-box {
+        display: flex;
+        justify-content: space-between;
+        flex-direction:column;
+        width: 100%;
+        height: auto;
+        background-color: #1e1e1e;
+        align-items: center;
+        text-align: left;
+        padding: 3rem;
+        margin-bottom:1rem;
+        gap: 2rem;
+        margin-top: 4rem;
+        
+
+    }
+
+    .contact-box p {
+        color: #f0f0f0;
+        margin-top: 1rem;
+    }
+    .conbox {
+        display: flex;
+        max-width:330px;
+        margin: 0 auto;
+    }
+
+}
+
+
+/* footer part */
+
 .footer-box {
     display: flex;
-    /* width: 100%; */
-    justify-content:space-between;
-    padding:4rem 52rem  4rem 23rem;
+    justify-content:space-around;
+    /* padding:4rem 52rem  4rem 23rem; */
   background-color:#1e1e1e;
-  height: 5vh;
+  align-items:center;
+  height: auto;
+  flex-wrap: wrap;
+  padding:1rem;
+  
 
 
 }
